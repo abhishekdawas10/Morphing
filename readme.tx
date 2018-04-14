@@ -1,0 +1,8 @@
+Calculate the bounding boxes
+In this step we calculate bounding boxes around triangles. The idea is to warp only a small part of the image and not the entire image for efficiency.
+
+Crop images & change coordinates
+To efficiently apply affine transform to a piece of the image and not the entire image, we crop the input image based on the bounding box calculated in the previous step. The coordinates of the triangles also need to be modified so as to reflect their location in the new cropped images. This is done by subtracting the x and y coordinates of the top left corner of the bounding box from the x and y coordinates of the triangle.
+
+
+https://www.learnopencv.com/warp-one-triangle-to-another-using-opencv-c-python/
